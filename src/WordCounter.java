@@ -10,17 +10,14 @@ class WordCounter {
         this.wordParcer = wordParcer;
     }
 
-    void countWords() throws IOException, RuntimeException {
-        Map<String, Integer> map = new HashMap<String, Integer>();
+    void countWords() throws IOException {
+        Map<String, Integer> map = new HashMap<>();
         String word = wordParcer.getWord();
         int totalWords = 0;
         while(word != null){
             totalWords++;
             map.put(word, map.containsKey(word) ? map.get(word) + 1:  1);
             word = wordParcer.getWord();
-        }
-        if(totalWords == 0){
-            throw new RuntimeException("There are no words in the file");
         }
 
         List<Map.Entry<String, Integer>> dataList = new ArrayList<>(map.entrySet());

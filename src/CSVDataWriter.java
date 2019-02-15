@@ -14,7 +14,7 @@ public class CSVDataWriter
     public void writeData(String...dataToWrite) throws IOException {
         StringBuilder newLine = new StringBuilder();
         for(String data: dataToWrite){
-            newLine.append(data + ", ");
+            newLine.append(data).append(", ");
         }
         newLine.delete(newLine.length() - 2, newLine.length());
         newLine.append('%');

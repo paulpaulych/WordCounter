@@ -14,7 +14,7 @@ public class Main {
             WordCounter wordCounter = new WordCounter(parcer, dataWriter);
             wordCounter.countWords();
 
-        }catch(IOException | RuntimeException exc){
+        }catch(IOException exc){
             System.err.println(exc.getMessage());
         }
     }
