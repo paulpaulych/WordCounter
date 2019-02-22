@@ -17,7 +17,6 @@ public class CSVDataWriter
             newLine.append(data).append(", ");
         }
         newLine.delete(newLine.length() - 2, newLine.length());
-        newLine.append('%');
         writer.write(newLine.toString(), 0, newLine.length()) ;
         writer.newLine();
     }

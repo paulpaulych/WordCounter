@@ -32,7 +32,7 @@ class WordCounter {
             dataWriter.writeData(
                     data.getKey(),
                     data.getValue().toString(),
-                    Long.toString(Math.round(data.getValue()/(double)totalWords*100)));
+                    Long.toString(Math.round(data.getValue()/(double)totalWords*100))+'%');
         }
     }
 }
